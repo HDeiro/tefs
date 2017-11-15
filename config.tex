@@ -1,0 +1,46 @@
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{longtable}
+\usepackage{array,etoolbox}
+\usepackage{float}
+\preto\tabular{\setcounter{magicrownumbers}{0}}
+\newcounter{magicrownumbers}
+
+\newcommand\rownumber{
+	\stepcounter{magicrownumbers}
+    \ifnum
+    	\value{magicrownumbers}<1000 
+        000\fi\arabic{magicrownumbers}
+}
+
+\hypersetup{
+    % title
+    pdftitle={Especificação Funcional de Software},
+    % authors
+    pdfauthor={Batman},
+    % subject of the document
+    pdfsubject={Especificação Funcional de Software}, 
+    % list of keywords
+    pdfkeywords={Keyword 1, Keyword 2, Keyword 3},
+    % false: boxed links; true: colored links
+    colorlinks=true,
+    % color of internal links
+    linkcolor=blue,     
+    % color of links to bibliography
+    citecolor=black,   
+    % color of file links
+    filecolor=black,    
+    % color of external links
+    urlcolor=purple,       
+    % only page is linked
+    linktoc=page            
+}
+
+\date{}
